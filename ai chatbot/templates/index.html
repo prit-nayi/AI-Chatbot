@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="logo-container">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="header-content">
+                <h1>AI Assistant</h1>
+                <p>Your intelligent conversation partner</p>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>Online</span>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatbox">
+            <div class="message bot-message">
+                <div class="welcome-message">
+                    <strong>Hello! 👋</strong><br>
+                    I'm your AI assistant, ready to help with any questions you might have. Whether it's about technology, science, writing, problem-solving, or just casual conversation - I'm here for you!
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Smart Conversations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-lightning-bolt"></i>
+                            <span>Instant Responses</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe & Secure</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="timestamp"></span>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Ask me anything..." autocomplete="off" aria-label="Type your message">
+            </div>
+            <button id="sendButton" aria-label="Send Message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
