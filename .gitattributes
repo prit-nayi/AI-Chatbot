@@ -1,0 +1,21 @@
+# Mark HTML, CSS, and JS files as generated/auxiliary to prioritize Python
+*.html linguist-generated=true
+*.css linguist-generated=true
+*.js linguist-generated=true
+
+# Mark template files as generated
+templates/* linguist-generated=true
+static/* linguist-generated=true
+
+# Ensure Python files are the primary language
+*.py linguist-detectable=true
+
+# Mark specific files as important for language detection
+app.py linguist-detectable=true
+requirements.txt linguist-detectable=true
+
+# Exclude certain files from language statistics
+*.md linguist-documentation=true
+README.md linguist-documentation=true
+.gitattributes linguist-vendored=true
+.gitignore linguist-vendored=true 
